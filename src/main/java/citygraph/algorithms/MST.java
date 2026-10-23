@@ -28,7 +28,9 @@ public class MST {
             if (dsu.union(edge.u(), edge.v())) {
                 totalWeight += edge.weight();
                 edgesTaken++;
-                if (edgesTaken == graph.getN() - 1) break;
+                if (edgesTaken == graph.getN() - 1) {
+                    break; // Как только дерево построено, прекращаем сканирование!
+                }
             }
         }
 
